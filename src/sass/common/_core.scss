@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'Neutra';
+    src: url('./fonts/Neutra-Text-Book.eot');
+    src: url('./fonts/Neutra-Text-Book.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Neutra-Text-Book.woff2') format('woff2'),
+         url('./fonts/Neutra-Text-Book.woff') format('woff'),
+         url('./fonts/Neutra-Text-Book.ttf')  format('truetype'),
+         url('./fonts/Neutra-Text-Book.svg#Nunito') format('svg');
+}
+
+@font-face {
+    font-family: 'Neutra Bold';
+    src: url('./fonts/Neutra-Text-Bold.eot');
+    src: url('./fonts/Neutra-Text-Bold.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Neutra-Text-Bold.woff2') format('woff2'),
+         url('./fonts/Neutra-Text-Bold.woff') format('woff'),
+         url('./fonts/Neutra-Text-Bold.ttf')  format('truetype'),
+         url('./fonts/Neutra-Text-Bold.svg#Nunito') format('svg');
+}
+
+* {
+   box-sizing: border-box;
+   outline-color: transparent;
+   outline-width: 0;
+   -ms-content-zooming: none;
+   -ms-scroll-chaining: none;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   -moz-osx-font-smoothing: grayscale;
+   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+   -webkit-appearance: none;
+   -moz-appearance: none;
+    outline: 0;
+}
+::-moz-selection {
+   color: $white;
+   background: $navy;
+}
+::selection {
+   color: $white;
+   background: $navy;
+}
+html, body {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  font-family: Neutra, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  color: $black;
+  line-height: 1;
+  letter-spacing: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  font-display: fallback;
+  scroll-behavior: smooth;
+}
+img {
+   border: none;
+   display: block;
+   max-width: 100%;
+}
+p{
+  font-size: 24px;
+  line-height: 34px;
+}
+a {
+  font-family: Neutra, sans-serif;
+   font-size: inherit;
+   font-weight: inherit;
+   font-style: inherit;
+   color: inherit;
+   line-height: inherit;
+   letter-spacing: inherit;
+   text-decoration: none;
+   @include transition();
+
+}
+
+textarea {
+   border-radius: 0;
+   overflow: hidden;
+   resize: none;
+}
+input {
+  font-family: Neutra, sans-serif;
+  font-size: inherit;
+  border-radius: 0;
+  color: $black;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+}
+button, input[type="submit"] {
+   cursor: pointer;
+   border-radius: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+em, i {
+   font-style: italic;
+}
+strong, b {
+   font-weight: 700;
+}
+.clearfix:after {
+   content: '';
+   display: block;
+   clear: both;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+
+/* Text meant only for screen readers. */
+.skip-link {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  color: $white;
+  word-wrap: normal !important;
+  &:focus {
+    background-color: $navy;
+    clip: auto !important;
+    color: $white;
+    clip-path: none;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+  }
+}

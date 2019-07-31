@@ -1,0 +1,74 @@
+@mixin afterAlignMiddle() {
+   &:after {
+      content: '';
+      position: relative;
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+   }
+}
+@mixin clearfix() {
+  content: '';
+  display: table;
+  clear: both;
+}
+@mixin imageResponsive() {
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+@mixin placeholder {
+   &::-webkit-input-placeholder { @content }
+   &::-moz-placeholder { @content }
+   &:-ms-input-placeholder { @content }
+   &:-moz-placeholder { @content }
+   &:placeholder { @content }
+}
+@mixin opacity($o) {
+   $filterVal: $o*100;
+   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$filterVal});
+   opacity: $o;
+}
+@mixin transform($transforms) {
+   -moz-transform: $transforms;
+   -o-transform: $transforms;
+   -ms-transform: $transforms;
+   -webkit-transform: $transforms;
+   transform: $transforms;
+}
+@mixin rotate($deg) {
+   @include transform(rotate(#{$deg}deg));
+}
+@mixin scale($scale) {
+   @include transform(scale($scale));
+} 
+@mixin translate($x, $y) {
+   @include transform(translate($x, $y));
+}
+@mixin skew($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+@mixin transition($duration: 0.2s, $function: ease-in-out, $element: all) {
+   -webkit-transition: $element $duration $function;
+   -moz-transition: $element $duration $function;
+   -ms-transition: $element $duration $function;
+   -o-transition: $element $duration $function;
+   transition: $element $duration $function;
+}
+@mixin delay($time: 0.5s) {
+    -webkit-transition-delay: $time;
+    -moz-transition-delay: $time;
+    -ms-transition-delay: $time;
+    -o-transition-delay: $time;
+    transition-delay: $time;
+}
+@mixin linearGradient($top, $bottom){
+  background-image: $top; /* Old browsers */
+  background-image: -moz-linear-gradient(to bottom,  $top 50%, $bottom 50%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%,$top), color-stop(50%,$bottom)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(bottom,  $top 50%,$bottom 50%); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(bottom,  $top 50%,$bottom 50%); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(bottom,  $top 50%,$bottom 50%); /* IE10+ */
+  background-image: linear-gradient(to bottom,  $top 50%,$bottom 50%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
