@@ -1,0 +1,165 @@
+.hero{
+	padding: 200px 0;
+	background-color: #EBE7F3;
+	&__container{
+		display: grid;
+		grid-template-columns: 2fr .9fr 2fr;
+		grid-column-gap: 5%;
+		justify-items: center;
+		align-items: center;
+		img{
+			width: 100%;
+			height: auto;
+		}
+		.hero__scroll{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 60px;
+		}
+	}
+	@media only screen and (max-width: 800px){
+		padding: 50px 0;
+		&__container{
+			// grid-template-columns: repeat(1, 100%);
+			.hero__scroll{
+				display: none;
+			}
+		}
+		&__img{
+			// display: none;
+		}
+	}
+}
+
+.reviews{
+	padding: 100px 0 200px 0;
+	.reviews__container{
+		width: 85%;
+		padding: 120px 22%;
+		margin: 0 auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-image: url('./dist/img/bgs/HERO-TESTIMONIALS.png');
+		box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+		text-align: center;
+		.reviews__header{
+			font-size: 49px;
+			line-height: 70px;
+			text-transform: uppercase;
+		}
+		.swiper-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 50px;
+			&, & p{
+				font-size: 20px;
+				line-height: 32px;
+			}
+		    .swiper-wrapper{
+				.review{
+					cursor: pointer;
+					&__author{
+						margin-top: 40px;
+					}
+					&__company{
+						margin-top: 20px;
+						text-transform: uppercase;
+						font-weight: bold;
+					}
+				}
+		    }
+		    .swiper-pagination{
+		    	position: static;
+		    	margin-top: 50px;
+		    	.swiper-pagination-bullet{
+		    		height: 3px;
+		    		width: 55px;
+		    		border: none;
+		    		border-radius: 0;
+		    		margin: 0 15px;
+		    		background-color: #4FBE9E;
+		    		opacity: 1;
+		    		transition: background-color .3s ease;
+		    		&-active{
+						background-color: #003B7D;
+		    		}
+		    	}
+		    }
+	    }
+	}
+	@media only screen and (max-width: 800px){
+		padding: 80px 0;
+		.reviews__container{
+			width: 100%;
+			box-shadow: none;
+			padding: 0;
+			background: #fff;
+			.reviews__header{
+				font-size: 35px;
+				line-height: 45px;
+			}
+			.swiper-container{
+				.swiper-pagination{
+					margin-top: 20px;
+					.swiper-pagination-bullet{
+						width: 20px;
+						margin: 0 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.cta{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url('./dist/img/bgs/CTA-BG.png');
+	padding: 150px 0;
+	text-align: center;
+	color: #fff;
+	.cta__header{
+		font-size: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 30px;
+		border-bottom: 3px solid #fff;
+		display: inline-block;
+		padding-bottom: 10px;
+	}
+	.cta__caller{
+		font-size: 49px;
+		line-height: 70px;
+		text-transform: uppercase;
+		max-width: 600px;
+		margin: 50px auto 0 auto;
+	}
+	.cta__text{
+		font-size: 20px;
+		max-width: 600px;
+		margin: 50px auto 0 auto;
+	}
+	.cta__button{
+		margin-top: 60px;
+		border: none;
+		border-radius: 3px;
+		background-color: #4FBE9E;
+		color: #fff;
+		font-size: 13px;
+		font-weight: bold;
+		padding: 11px 23px;
+		letter-spacing: 2px;
+	}
+	@media only screen and (max-width: 800px){
+		padding: 80px 0;
+		.cta__caller{
+			font-size: 35px;
+			line-height: 45px;	
+		}
+	}
+}

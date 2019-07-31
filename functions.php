@@ -94,8 +94,9 @@ function add_async_forscript($url) {
 add_filter('clean_url', 'add_async_forscript', 11, 1);
 
 function letsdayout_enqueue_script() {
-  wp_enqueue_script( 'bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), '4.3.1', true );
-  wp_enqueue_script( 'main', get_stylesheet_directory_uri() . '/dist/js/main.js#asyncload', array( 'bootstrap-js' ), '20190720' , true );
+  // wp_enqueue_script( 'bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), '4.3.1', true );
+  wp_enqueue_script( 'swiper', get_stylesheet_directory_uri() . '/dist/js/libs/swiper.min.js', array( ), '4.5.0' , true );
+  wp_enqueue_script( 'main', get_stylesheet_directory_uri() . '/dist/js/main.js#asyncload', array( 'swiper' ), '20190720' , true );
 
   wp_localize_script( 'main', 'settings', array(
       'ajaxurl'    => admin_url( 'admin-ajax.php' )

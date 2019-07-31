@@ -1,21 +1,49 @@
 @font-face {
-    font-family: 'Neutra';
-    src: url('./fonts/Neutra-Text-Book.eot');
-    src: url('./fonts/Neutra-Text-Book.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/Neutra-Text-Book.woff2') format('woff2'),
-         url('./fonts/Neutra-Text-Book.woff') format('woff'),
-         url('./fonts/Neutra-Text-Book.ttf')  format('truetype'),
-         url('./fonts/Neutra-Text-Book.svg#Nunito') format('svg');
+    font-family: 'Jost';
+    src: url('./fonts/Jost-Bold.eot');
+    src: url('./fonts/Jost-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Jost-Bold.woff2') format('woff2'),
+        url('./fonts/Jost-Bold.woff') format('woff'),
+        url('./fonts/Jost-Bold.ttf') format('truetype'),
+        url('./fonts/Jost-Bold.svg#Jost-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Neutra Bold';
-    src: url('./fonts/Neutra-Text-Bold.eot');
-    src: url('./fonts/Neutra-Text-Bold.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/Neutra-Text-Bold.woff2') format('woff2'),
-         url('./fonts/Neutra-Text-Bold.woff') format('woff'),
-         url('./fonts/Neutra-Text-Bold.ttf')  format('truetype'),
-         url('./fonts/Neutra-Text-Bold.svg#Nunito') format('svg');
+    font-family: 'Jost';
+    src: url('./fonts/Jost-BoldItalic.eot');
+    src: url('./fonts/Jost-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Jost-BoldItalic.woff2') format('woff2'),
+        url('./fonts/Jost-BoldItalic.woff') format('woff'),
+        url('./fonts/Jost-BoldItalic.ttf') format('truetype'),
+        url('./fonts/Jost-BoldItalic.svg#Jost-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('./fonts/Jost-Book.eot');
+    src: url('./fonts/Jost-Book.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Jost-Book.woff2') format('woff2'),
+        url('./fonts/Jost-Book.woff') format('woff'),
+        url('./fonts/Jost-Book.ttf') format('truetype'),
+        url('./fonts/Jost-Book.svg#Jost-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('./fonts/Jost-BookItalic.eot');
+    src: url('./fonts/Jost-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Jost-BookItalic.woff2') format('woff2'),
+        url('./fonts/Jost-BookItalic.woff') format('woff'),
+        url('./fonts/Jost-BookItalic.ttf') format('truetype'),
+        url('./fonts/Jost-BookItalic.svg#Jost-BookItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
 }
 
 * {
@@ -44,8 +72,8 @@ html, body {
   min-width: 100%;
   max-width: 100%;
   min-height: 100%;
-  font-family: Neutra, sans-serif;
-  font-size: 14px;
+  font-family: Jost, sans-serif;
+  font-size: 20px;
   font-weight: normal;
   font-style: normal;
   color: $black;
@@ -64,12 +92,8 @@ img {
    display: block;
    max-width: 100%;
 }
-p{
-  font-size: 24px;
-  line-height: 34px;
-}
 a {
-  font-family: Neutra, sans-serif;
+  font-family: Jost, sans-serif;
    font-size: inherit;
    font-weight: inherit;
    font-style: inherit;
@@ -80,14 +104,20 @@ a {
    @include transition();
 
 }
-
+p{
+  font-size: 20px;
+  line-height: 32px;
+}
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+}
 textarea {
    border-radius: 0;
    overflow: hidden;
    resize: none;
 }
 input {
-  font-family: Neutra, sans-serif;
+  font-family: Jost, sans-serif;
   font-size: inherit;
   border-radius: 0;
   color: $black;
@@ -153,4 +183,10 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     width: auto;
     z-index: 100000; /* Above WP toolbar. */
   }
+}
+
+.container{
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 10px;
 }

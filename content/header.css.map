@@ -1,0 +1,1 @@
+{"version":3,"sources":["content/header.scss"],"names":[],"mappings":"AAAA,OACC,OAAA,MACA,OAAA,IAAA,MAAA,KACA,WAAA","file":"header.css","sourcesContent":["header{\n\theight: 150px;\n\tborder: 1px solid #000;\n\ttext-align: center;\n}"]}

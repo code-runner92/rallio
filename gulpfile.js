@@ -44,7 +44,8 @@ gulp.task('styles', function(){
 
 gulp.task('scripts', function(){
   return gulp.src([
-    'src/js/scripts/header.js'
+    'src/js/scripts/header.js',
+    'src/js/scripts/front-page.js'
     ])
   .pipe(babel({
       presets: ['@babel/env']
