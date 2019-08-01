@@ -1,1 +1,1 @@
-"use strict";console.log("hello from header");
+"use strict";var menuToggler=document.querySelector(".menu-toggler"),menu=document.querySelector(".header-menu");menuToggler.addEventListener("click",function(){menu.classList.toggle("visible")});

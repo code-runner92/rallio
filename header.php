@@ -43,6 +43,24 @@ $GLOBALS['src'] = get_template_directory_uri(); ?>
 
 <body <?php body_class(); ?> ontouchstart>
 
-<header>
-  HEADER  
+<header class="header">
+<div class="container header-container">
+  <div class="logo-container">
+    <a class="logo" href="<?php echo home_url('/'); ?>" title="<?php _e('Logo Rallio', 'rallio'); ?>">
+      <img class="header__logo" src="<?php echo $GLOBALS['src']; ?>/dist/img/branding/rallio-logo.svg" alt="<?php _e('Logo Rallio', 'rallio'); ?>">
+    </a>
+    <div class="menu-toggler">
+      toggler
+    </div>
+  </div>
+  <ul class="header-menu">
+    <?php wp_nav_menu( array( 
+      'theme_location' => 'main_menu', 
+      'menu_class' => '',
+      'items_wrap' => '%3$s',
+      'container' => '',
+      "container_class" => ''
+    ) ); ?>
+  </ul>
+</div>
 </header>
