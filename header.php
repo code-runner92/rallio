@@ -50,7 +50,9 @@ $GLOBALS['src'] = get_template_directory_uri(); ?>
       <img class="header__logo" src="<?php echo $GLOBALS['src']; ?>/dist/img/branding/rallio-logo.svg" alt="<?php _e('Logo Rallio', 'rallio'); ?>">
     </a>
     <div class="menu-toggler">
-      toggler
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
     </div>
   </div>
   <ul class="header-menu">

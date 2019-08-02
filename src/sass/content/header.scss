@@ -1,5 +1,8 @@
 .header{
 	padding: 50px 0;
+	z-index: 1;
+	position: relative;
+	background: #fff;
 	.header-container{
 		display: flex;
 		flex-direction: row;
@@ -17,16 +20,60 @@
 			align-items: center;
 			li{
 				margin: 0 25px;
+				a{
+					transition: all .5s ease;
+					padding-bottom: 8px;
+					border-bottom: 2px solid transparent;
+					&:hover, &:active{
+						border-color: #000;
+					}
+				}
+			}
+			.link{
+				a{
+					img{
+						width: 25px;
+						height: auto;
+					}
+				}
 			}
 		}
 		.menu-toggler{
 			display: none;
+			.bar1, .bar2, .bar3 {
+			  width: 30px;
+			  height: 2px;
+			  background-color: #244262;
+			  margin: 6px 0;
+			  transition: 0.4s;
+			}
+			&.x{
+				.bar1{
+					transform: rotate(-45deg) translate(-6px, 5.5px);
+				}
+				.bar2{
+					opacity: 0;
+				}
+				.bar3{
+					transform: rotate(45deg) translate(-6px, -6px);
+				}
+			}
 		}
 	}
 	@media only screen and (max-width: 1000px){
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
 		padding: 15px 0;
+		background: transparent;
+		min-height: 0;
+		transition: all .5s ease-in-out 0s, background .5s ease-in-out 0s;
 		.header-container{
 			flex-direction: column;
+			height: 100%;
+			justify-content: flex-start;
+			transition: all .5s ease-in-out 0s;
 			.logo{
 				width: 50%;
 				height: auto;
@@ -37,17 +84,37 @@
 			.header-menu{
 				max-height: 0;
 				overflow: hidden;
-				transition: all .5s ease-in-out;
+				transition: all 0s ease-in-out 0s;
 				flex-direction: column;
+				flex-grow: 1;
+				justify-content: space-around;
 				li{
 					margin: 10px 0;
-				}
-				&.visible{
-					max-height: 1000px;
-					padding: 20px 0;
+					a{
+						&:hover, &:active{
+							border-color: transparent;
+						}
+					}
 				}
 			}
 
+		}
+		&.visible{
+			background: #fff;
+			transition: all .1s ease;
+			min-height: 100vh;
+			height: 100%;
+			.header-container{
+				.header-menu{
+					transition: all .8s ease-in-out .5s;
+					max-height: 1000px;
+					// padding: 20px 0;
+				}
+			}
+		}
+		&.scrolled{
+			background: #fff;
+			transition: background .3s linear 0s;
 		}
 	}
 }
