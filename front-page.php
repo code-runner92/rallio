@@ -7,8 +7,6 @@
 		<img class="hero__logo" src="<?php echo  $GLOBALS['src'] ?>/dist/img/branding/rallio-logo_sygnet.svg" alt="">
 		<img class="hero__img" src="<?php echo  $GLOBALS['src'] ?>/dist/img/HERO-ILLU2.svg" alt="">
 		<div class="hero__scroll">
-			<!-- get template part.  https://blog.teamtreehouse.com/perfect-wordpress-inline-svg-workflow -->
-			<!-- <img src="<?php echo  $GLOBALS['src'] ?>/dist/img/icons/SCROLL.svg" alt=""> -->
 			<?php get_template_part('dist/img/icons/inline-SCROLL.svg'); ?>
 		</div>
 	</div>
@@ -149,6 +147,7 @@ $flow_text = get_field('flow_text');
 				<p class="final-phase__name"><?php echo $final_phase_name; ?></p>
 				<div class="final-phase__desc"><?php echo $final_phase_desc; ?></div>
 			</div>
+			<span class="background-text">The ultimate<br/>solution</span>
 		</section>
 
 
@@ -182,6 +181,12 @@ $flow_text = get_field('flow_text');
 
 		</section>
 
+	</div>
+	<div class="circles">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
 	</div>
 </section>
 

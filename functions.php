@@ -71,6 +71,9 @@ function hide_editor() {
   if($template_file == 'page-about.php'){
     remove_post_type_support('page', 'editor');
   }
+  if($template_file == 'page-privacy.php'){
+    remove_post_type_support('page', 'editor');
+  }
   if((int) get_option('page_on_front')==get_the_ID())
   {
       remove_post_type_support('page', 'editor');

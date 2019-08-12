@@ -1,0 +1,63 @@
+.page-privacy{
+	position: relative;
+	padding: 50px 0 100px 0;
+	text-align: center;
+	.container--privacy{
+		max-width: 870px;
+	}
+	h1{
+		font-size: 49px;
+		line-height: 70px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	h2{
+		font-size: 20px;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		line-height: 30px;
+		margin-bottom: 50px;
+	}
+	p{
+		font-size: 16px;
+	}
+	section{
+		padding-top: 50px;
+		padding-bottom: 50px;
+		text-align: left;
+		&:after{
+			content: '';
+			width: 100vw;
+			height: 1px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			background: #E7E7E7;
+			margin-top: 50px;
+		}
+	}
+	.text{
+		p{
+			color: #757575;
+			line-height: 24px;
+		}
+	}
+	.information{
+		.information-title{
+			text-align: center;
+		}
+		.under-title{
+			margin-top: 30px;
+		}
+		.row{
+			margin-top: 100px;
+			h2{
+				margin-bottom: 20px;
+			}
+			@media only screen and (max-width: 767px){
+				text-align: center;
+			}
+		}
+	}
+
+}

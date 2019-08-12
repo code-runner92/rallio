@@ -110,6 +110,7 @@ html, body {
   -webkit-text-size-adjust: 100%; /* 2 */
   font-display: fallback;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 img {
    border: none;
