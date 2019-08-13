@@ -4,10 +4,12 @@ $frontpage_id = get_option( 'page_on_front' );
 
 <section class="p404">
 	<div class="container">
-		<h1 class="header--line"><span><?php _e('Page not found', 'letsdayout'); ?></span></h1>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo get_the_title($frontpage_id); ?>" class="btn">
-			<?php echo get_the_title($frontpage_id); ?>
-		</a>
+		<div class="p404-container">
+			<div class="heading">Server error</div>
+			<div class="code">404</div>
+			<p class="text-header">This is awkward</p>
+			<p class="text">Page not found. It either doesn’t exist or has moved somewhere else.</p>
+		</div>
 	</div>
 </section>
 

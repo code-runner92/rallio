@@ -1,0 +1,225 @@
+.blog-hero{
+	height: 400px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	@media only screen and (max-width: 1000px){
+		height: 100vh;
+	}
+}
+
+.blog-container{
+	text-align: center;
+	padding-bottom: 150px;
+	h1{
+		font-size: 50px;
+		margin: 100px 0;
+		@media only screen and (max-width: 1000px){
+			margin: 50px 0;
+		}
+	}
+	.categories{
+		padding-bottom: 150px;
+		@media only screen and (max-width: 1000px){
+			padding-bottom: 50px;
+		}
+		.categories-title{
+			font-size: 20px;
+			letter-spacing: 0.5px;
+			font-weight: bold;
+		}
+		.blog-filters-container{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top: 30px;
+			.blog-filter{
+				color: #AEAEAE;
+				text-transform: uppercase;
+				font-weight: bold;
+				transition: all .3s ease;
+				&:not(:first-child){
+					margin-left: 50px;
+				}
+				&:hover{
+					color: #4FBE9E;
+				}
+				&.active{
+					color: #4FBE9E;
+				}
+			}
+			@media only screen and (max-width: 1000px){
+				flex-direction: column;
+				.blog-filter{
+					&:not(:first-child){
+						margin-left: 0;
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
+	.blog-list{
+		padding: 0 130px;
+		@media only screen and (max-width: 1500px){
+			padding: 0;
+		}
+		.blog-list__post{
+			padding: 10px;
+			@media only screen and (max-width: 1000px){
+				padding: 20px;
+			}
+			.post-container{
+				border-radius: 10px;
+				box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+				height: 100%;
+				.post__img{
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
+					height: 350px;
+					border-radius: 10px 10px 0 0;
+					background-color: #f3f3f3;
+				}
+				.post__desc{
+					padding: 50px;
+					text-align: left;
+					.post__date{
+						font-size: 13px;
+						font-weight: 300;
+						margin-bottom: 10px;
+						display: inline-block;
+					}
+					.post__title{
+						text-transform: uppercase;
+						margin-bottom: 30px;
+						width: 100%;
+						&:after{
+							content: '';
+							width: 50%;
+							margin-right: 50%;
+							height: 3px;
+							background: #000;
+							display: inline-block;
+							margin-top: 30px;
+						}
+					}
+					.post__excerpt{
+						font-weight: 300;
+						margin-bottom: 30px;
+					}
+					.read-more{
+						color: #4FBE9E;
+						letter-spacing: 2px;
+						text-transform: uppercase;
+						font-size: 13px;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+	.blog-pagination{
+		width: 100%;
+		margin: 100px auto 0 auto;
+		color: #AEAEAE;
+		font-weight: bold;
+		.page-numbers{
+			transition: all .3s ease;
+			border-bottom: 3px solid transparent;
+			padding-bottom: 5px;
+			margin: 0 15px;
+			&.current{
+				color: #4FBE9E;
+				border-color: #4FBE9E;
+			}
+			&:not(.dots):hover{
+				color: #4FBE9E;
+			}
+			&.prev, &.next{
+				color: #000;
+				font-weight: normal;
+				font-size: 30px;
+			}
+			&.prev{
+				margin: 0 35px 0 0;
+			}
+			&.next{
+				margin: 0 0 0 35px;
+			}
+		}
+	}
+}
+
+.newsletter{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url('./dist/img/bgs/CTA-BG.png');
+	padding: 150px 0;
+	text-align: center;
+	color: #fff;
+	.newsletter__header{
+		font-size: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 30px;
+		border-bottom: 3px solid #fff;
+		display: inline-block;
+		padding-bottom: 10px;
+	}
+	.newsletter__caller{
+		font-size: 49px;
+		line-height: 70px;
+		text-transform: uppercase;
+		max-width: 600px;
+		margin: 50px auto 0 auto;
+	}
+	.newsletter__button{
+		border: none;
+		border-radius: 3px;
+		background-color: #4FBE9E;
+		color: #fff;
+		font-size: 13px;
+		font-weight: bold;
+		padding: 11px 23px;
+		letter-spacing: 2px;
+		transition: all .5s ease;
+		&:hover, &:active{
+			background-color: #fff;
+			color: #4FBE9E;
+		}
+	}
+	form{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 50px;
+		input{
+			background: transparent;
+			border: 1px solid #FFFFFF;
+			border-radius: none;
+			width: 530px;
+			text-align: center;
+			color: #fff;
+			@media only screen and (max-width: 1000px){
+				width: 80%;
+			}
+		}
+		label{
+			margin-top: 5px;
+		}
+		button{
+			margin-top: 30px;
+		}
+	}
+	@media only screen and (max-width: 800px){
+		padding: 80px 0;
+		.newsletter__caller{
+			font-size: 35px;
+			line-height: 45px;
+			max-width: 80%;
+		}
+	}
+}
