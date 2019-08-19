@@ -74,6 +74,9 @@ function hide_editor() {
   if($template_file == 'page-privacy.php'){
     remove_post_type_support('page', 'editor');
   }
+  if($template_file == 'page-case-studies.php'){
+    remove_post_type_support('page', 'editor');
+  }
   if((int) get_option('page_on_front')==get_the_ID())
   {
       remove_post_type_support('page', 'editor');
@@ -213,7 +216,7 @@ function my_acf_load_translated_attachment($value, $post_id, $field) {
 }
 
 function custom_excerpt_length( $length ) {
-  return 180;
+  return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -232,3 +235,54 @@ function wpse_edit_post_show_excerpt( $user_login, $user ) {
     }
 }
 add_action( 'wp_login', 'wpse_edit_post_show_excerpt', 10, 2 );
+
+// 
+// LAYOUT FOR CASE STUDIES
+// 
+
+/*
+* Define a constant path to our single template folder
+*/
+define(SINGLE_PATH, TEMPLATEPATH);
+ 
+/**
+* Filter the single_template with our custom function
+*/
+add_filter('single_template', 'my_single_template');
+ 
+/**
+* Single template function which will choose our template
+*/
+function my_single_template($single) {
+global $wp_query, $post;
+ 
+/**
+* Checks for single template by category
+* Check by category slug and ID
+*/
+foreach((array)get_the_category() as $cat) :
+ 
+if(file_exists(SINGLE_PATH . '/single-cat-' . $cat->slug . '.php'))
+return SINGLE_PATH . '/single-cat-' . $cat->slug . '.php';
+ 
+elseif(file_exists(SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php'))
+return SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php';
+
+else {
+  return SINGLE_PATH . '/single.php';
+}
+ 
+endforeach;
+}
+
+// 
+// 
+// 
+// My function to modify the main query object
+function my_modify_main_query( $query ) {
+if ( $query->is_main_query() ) { // Run only on the homepage
+$query->query_vars['cat'] = -10; // Exclude my featured category because I display that elsewhere
+}
+}
+// Hook my above function to the pre_get_posts action
+add_action( 'pre_get_posts', 'my_modify_main_query' );

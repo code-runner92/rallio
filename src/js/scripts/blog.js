@@ -3,15 +3,11 @@ categories = document.querySelectorAll('.blog-filter'),
 all = document.querySelector('.blog-filter.all');
 
 if (body.classList.contains('blog')) {
-	const urlParams = new URLSearchParams(window.location.search);
-	const cat = urlParams.get('cat');
-	if (cat) {
-		categories.forEach(category => {
-			if (category.dataset.id === cat) {
-				category.classList.add('active');
-			}
-		});
-	} else {
-		all.classList.add('active');
-	}
+	all.classList.add('active');
 }
+
+categories.forEach(category => {
+	category.addEventListener('click', () => {
+		category.classList.add('active');
+	})
+})
