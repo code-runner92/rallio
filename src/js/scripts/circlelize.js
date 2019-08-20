@@ -2,7 +2,7 @@ const circlelize = (container) => {
 	const circlesContainer = document.querySelector('.circles');
 	const containerHeight = container.clientHeight;
 	const NoOfCircles = 5 * Math.round( containerHeight / window.screen.width );
-
+	console.log(NoOfCircles);
 	let circles = '';
 
 	for (let i=0; i < NoOfCircles; i++) {
@@ -28,4 +28,12 @@ if (postContainer) {
 	circlelize(postContainer);
 }
 
-var disqus_developer = 1;
+const aboutContainer = document.querySelector('.about-container');
+if (aboutContainer) {
+	circlelize(aboutContainer);
+}
+
+const localContainer = document.querySelector('.local-container');
+if (localContainer) {
+	circlelize(localContainer);
+}

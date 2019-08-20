@@ -77,6 +77,9 @@ function hide_editor() {
   if($template_file == 'page-case-studies.php'){
     remove_post_type_support('page', 'editor');
   }
+  if($template_file == 'page-local.php'){
+    remove_post_type_support('page', 'editor');
+  }
   if((int) get_option('page_on_front')==get_the_ID())
   {
       remove_post_type_support('page', 'editor');
@@ -243,7 +246,7 @@ add_action( 'wp_login', 'wpse_edit_post_show_excerpt', 10, 2 );
 /*
 * Define a constant path to our single template folder
 */
-define(SINGLE_PATH, TEMPLATEPATH);
+define('SINGLE_PATH', TEMPLATEPATH);
  
 /**
 * Filter the single_template with our custom function

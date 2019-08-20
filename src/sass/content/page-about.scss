@@ -1,0 +1,143 @@
+.about-hero{
+	height: 500px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	z-index: 1;
+	@media only screen and (max-width: 1000px){
+		height: 50vh;
+	}
+}
+
+.about-container{
+	text-align: center;
+	padding: 150px 0;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	*{
+		z-index: 1;
+	}
+	.container{
+		div{
+			position: relative;
+		}
+	}
+	@media only screen and (max-width: 1000px){
+		padding: 50px 0;
+	}
+	.main-header{
+		font-size: 50px;
+		line-height: 70px;
+		font-weight: bold;
+		text-transform: uppercase;
+		@media only screen and (max-width: 1000px){
+			font-size: 30px;
+			line-height: 42px;
+		}
+	}
+	.slogan{
+		max-width: 450px;
+		margin: 50px auto 0 auto;
+		p{
+			font-size: 30px;
+			line-height: 42px;
+			@media only screen and (max-width: 1000px){
+				font-size: 20px;
+				line-height: 32px;
+			}
+		}
+	}
+
+	.about-culture{
+		margin-top: 150px;
+		@media only screen and (max-width: 1000px){
+			margin-top: 50px;
+		}
+		.culture-header{
+			font-size: 50px;
+			line-height: 70px;
+			font-weight: bold;
+			text-transform: uppercase;
+			@media only screen and (max-width: 1000px){
+				font-size: 30px;
+				line-height: 42px;
+			}
+		}
+		.culture-slogan{
+			max-width: 1200px;
+			margin: 50px auto 0 auto;
+			p{
+				font-size: 30px;
+				line-height: 42px;
+				@media only screen and (max-width: 1000px){
+					font-size: 20px;
+					line-height: 32px;
+				}
+			}
+		}
+		.culture-box{
+			margin-top: 100px;
+			border-radius: 10px;
+			background: #fff;
+			box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+			.culture-image{
+				height: 400px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				border-radius: 10px 10px 0 0;
+				@media only screen and (max-width: 1000px){
+					height: 50vw;
+				}
+			}
+			.culture-values{
+				padding: 50px;
+				max-width: 1200px;
+				margin: 0 auto;
+				@media only screen and (max-width: 1000px){
+					padding: 40px 20px 0 20px;
+				}
+				.culture-value{
+					text-align: left;
+					margin-bottom: 50px;
+					.value-title{
+						font-weight: bold;
+						text-transform: uppercase;
+						padding-bottom: 30px;
+						margin-bottom: 30px;
+						border-bottom: 3px solid #000;
+						display: inline-block;
+						min-width: 260px;
+						@media only screen and (max-width: 1000px){
+							min-width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+	.about-review-container{
+		margin-top: 100px;
+		@media only screen and (max-width: 1000px){
+			margin-top: 50px;
+		}
+		.about-review{
+			max-width: 1200px;
+			margin: 0 auto;
+			p{
+				font-size: 30px;
+				line-height: 42px;
+				@media only screen and (max-width: 1000px){
+					font-size: 20px;
+					line-height: 32px;
+				}
+			}
+		}
+		.about-author{
+			margin-top: 50px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+}
