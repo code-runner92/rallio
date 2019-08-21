@@ -1,4 +1,4 @@
-.local-hero{
+.tech-hero{
 	height: 500px;
 	background: #EBE7F3;
 	z-index: 1;
@@ -8,16 +8,16 @@
 	}
 	.hero-img{
 		width: 80%;
-		max-width: 700px;
+		max-width: 620px;
 		height: auto;
 		position: absolute;
 		left: 50%;
 		transform: translate(-50%, 0);
-		bottom: -20%;
+		bottom: -40%;
 	}
 }
 
-.local-container{
+.tech-container{
 	text-align: center;
 	padding-top: 250px;
 	position: relative;
@@ -35,7 +35,7 @@
 	@media only screen and (max-width: 1000px){
 		padding-top: 150px;
 	}
-	.local-header{
+	.tech-header{
 		font-size: 50px;
 		line-height: 70px;
 		font-weight: bold;
@@ -51,7 +51,7 @@
 			}
 		}
 	}
-	.local-text{
+	.tech-text{
 		max-width: 800px;
 		margin: 50px auto 0 auto;
 	}

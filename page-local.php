@@ -22,14 +22,169 @@ $bg_img_url = get_field('about_us_image');
 
 		<h1 class="local-header"><?php echo $header; ?></h1>
 		<div class="local-text"><?php echo $text; ?></div>
-		<h1 class="local-header"><?php echo $header_2; ?></h1>
+		<h2 class="local-header not-first"><?php echo $header_2; ?></h2>
 		<div class="local-text"><?php echo $text_2; ?></div>
+
+		<div class="local-flow">
+		
+			<?php 
+			$box_1 = get_field('local_box_1');
+			$box_2 = get_field('local_box_2');
+			$box_3 = get_field('local_box_3');
+			?>
+			<div class="local-boxes" style="background-image: url('<?php echo $GLOBALS['src'] ?>/dist/img/local/AGENCY4.svg; ?>')">
+				<div class="row" >
+					<div class="local-box-container col-12 col-xl-4">
+						<div class="local-box-img">
+							<img class="phone" src="<?php echo  $GLOBALS['src'] ?>/dist/img/local/AGENCY2.svg" alt="">
+							<img class="arrow" src="<?php echo  $GLOBALS['src'] ?>/dist/img/ARROW.svg" alt="">
+							<img class="phone" src="<?php echo  $GLOBALS['src'] ?>/dist/img/local/AGENCY3.svg" alt="">
+							<img class="arrow" src="<?php echo  $GLOBALS['src'] ?>/dist/img/ARROW.svg" alt="">
+						</div>
+						<div class="local-box-text">
+							<div class="local-box-number">1</div>
+							<?php echo $box_1; ?>		
+						</div>
+					</div>
+					<div class="arrow-mobile">
+						<img class="arrow" src="<?php echo  $GLOBALS['src'] ?>/dist/img/ARROW.svg" alt="">
+					</div>
+					<div class="local-box-container col-12 col-xl-4">
+						<div class="local-box-img phone-main" style="background-image: url('<?php echo $GLOBALS['src'] ?>/dist/img/local/AGENCY4.svg; ?>')">
+						</div>
+						<div class="local-box-text">
+							<div class="local-box-number">2</div>
+							<?php echo $box_2; ?>		
+						</div>
+					</div>
+					<div class="arrow-mobile">
+						<img class="arrow" src="<?php echo  $GLOBALS['src'] ?>/dist/img/ARROW.svg" alt="">
+					</div>
+					<div class="local-box-container col-12 col-xl-4">
+						<div class="local-box-img">
+							<img class="arrow" src="<?php echo  $GLOBALS['src'] ?>/dist/img/ARROW.svg" alt="">
+							<img class="phone" src="<?php echo  $GLOBALS['src'] ?>/dist/img/local/AGENCY5.svg" alt="">
+							<img class="arrow" src="<?php echo  $GLOBALS['src'] ?>/dist/img/ARROW.svg" alt="">
+							<img class="phone" src="<?php echo  $GLOBALS['src'] ?>/dist/img/local/AGENCY6.svg" alt="">
+						</div>
+						<div class="local-box-text">
+							<div class="local-box-number">3</div>
+							<?php echo $box_3; ?>		
+						</div>
+					</div>
+					<div class="arrow-mobile">
+						<img class="arrow" src="<?php echo  $GLOBALS['src'] ?>/dist/img/ARROW.svg" alt="">
+					</div>
+				</div>
+			</div>
+			
+			<?php 
+			$flow_result = get_field('flow_result');
+			$flow_result_header = $flow_result['header'];
+			$flow_result_text = $flow_result['text'];
+			?>
+			<div class="flow-result">
+				<img class="flow-result-img" src="<?php echo  $GLOBALS['src'] ?>/dist/img/local/AGENCY7.svg" alt="">
+				<div class="flow-result-box">
+					<p class="flow-result-header"><?php echo $flow_result_header; ?></p>
+					<p class="flow-result-text"><?php echo $flow_result_text; ?></p>
+				</div>
+			</div>
+			
+		</div>
 
 	</div>
 	
+	<?php 
+		$employee_advocacy_header = get_field('employee_advocacy_header');
+		$employee_advocacy_text = get_field('employee_advocacy_text');
+	?>
+	<section class="employee-advocacy">
+		<div class="container">
+			<h2 class="local-header"><?php echo $employee_advocacy_header; ?></h2>
+			<div class="local-text"><?php echo $employee_advocacy_text; ?></div>
+			<img class="employee-advocacy-img" src="<?php echo  $GLOBALS['src'] ?>/dist/img/local/AGENCY9.svg" alt="">
+			<img class="employee-advocacy-img" src="<?php echo  $GLOBALS['src'] ?>/dist/img/local/AGENCYT9.svg" alt="">
+		</div>
+	</section>
+
+	<?php 
+	$reviews_header = get_field('reviews_header', 'options');
+	$reviews = get_field('reviews', 'options');
+	?>
+
+	<?php if ($reviews) { ?>
+	<section class="reviews">
+		<div class="container">
+			<div class="reviews__container">
+				<h2 class="reviews__header">
+					<?php echo $reviews_header; ?>
+				</h2>
+
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+
+						<?php foreach( $reviews as $review ) {
+
+							$content = $review['review_content'];
+							$author = $review['review_author'];
+							$company = $review['review_company'];
+						?>
+
+					 		<div class="swiper-slide review">
+					 			<div class="review__content">
+					 				<?php echo $content; ?>
+					 			</div>
+					 			<div class="review__author">
+					 				<?php echo $author; ?>
+					 			</div>
+					 			<div class="review__company">
+					 				<?php echo $company; ?>
+					 			</div>
+					 		</div>
+
+					 	<?php } ?>
+
+					</div>
+					
+					<div class="swiper-pagination"></div>
+				</div>			
+
+			</div>
+		</div>
+	</section>
+	<?php } ?>
+
+
 	<div class="circles"></div>
 
 </div>
+
+<?php
+$cta_box = get_field('local_tech_cta', 'options');
+$cta_header = $cta_box['header'];
+$cta_slogan = $cta_box['slogan'];
+$cta_text = $cta_box['text_under_the_form'];
+?>
+
+<section class="cta cta_case_studies">
+	<div class="container">
+		<p class="cta__header">
+			<?php echo $cta_header; ?>
+		</p>
+		<h2 class="cta__caller">
+			<?php echo $cta_slogan; ?>
+		</h2>
+		<form action="">
+			<input type="text">
+			<label for="">Enter you e-mail address</label>
+			<button class="cta__button">Submit</button>
+		</form>
+		<div class="cta__text">
+			<?php echo $cta_text; ?>
+		</div>
+	</div>
+</section>
 
 
 <?php get_footer(); ?>

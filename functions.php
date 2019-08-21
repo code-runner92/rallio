@@ -80,6 +80,9 @@ function hide_editor() {
   if($template_file == 'page-local.php'){
     remove_post_type_support('page', 'editor');
   }
+  if($template_file == 'page-tech.php'){
+    remove_post_type_support('page', 'editor');
+  }
   if((int) get_option('page_on_front')==get_the_ID())
   {
       remove_post_type_support('page', 'editor');

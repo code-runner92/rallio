@@ -191,8 +191,8 @@ $flow_text = get_field('flow_text');
 </section>
 
 <?php 
-$reviews_header = get_field('reviews_header');
-$reviews = get_field('reviews');
+$reviews_header = get_field('reviews_header', 'options');
+$reviews = get_field('reviews', 'options');
 ?>
 
 <?php if ($reviews) { ?>
