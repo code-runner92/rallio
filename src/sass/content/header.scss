@@ -12,6 +12,21 @@
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
+			img, svg{
+				width: 100%;
+				height: auto;
+				// @media only screen and (min-width: 1001px){
+				// 	#sygnet{
+				// 		transition: all .2s ease;
+				// 		transform-origin: 30px 23.5px;
+				// 	}
+				// 	&:hover{
+				// 		#sygnet{
+				// 			transform: perspective(10000px) rotateY(360deg);
+				// 		}
+				// 	}
+				// }
+			}
 		}
 		.header-menu{
 			list-style: none;
@@ -129,6 +144,7 @@
 			transition: all .5s ease-in-out 0s;
 			.logo{
 				width: 50%;
+				max-width: 255px;
 				height: auto;
 			}
 			.menu-toggler{
@@ -168,6 +184,39 @@
 		&.scrolled{
 			background: #fff;
 			transition: background .3s linear 0s;
+		}
+	}
+}
+
+.page-template-page-about, .page-template-page-case-studies, .blog {
+	@media only screen and (max-width: 1000px){
+		.header{
+			.menu-toggler{
+				.bar1, .bar2, .bar3 {
+					background-color: #fff;
+				}
+			}
+			.header-container{
+				.logo-container{
+					svg path{
+						fill: #fff;
+					}
+				}
+			}
+			&.scrolled, &.visible{
+				.menu-toggler{
+					.bar1, .bar2, .bar3 {
+						background-color: #244262;
+					}
+				}
+				.header-container{
+					.logo-container{
+						svg path{
+							fill: #244262;
+						}
+					}
+				}
+			}
 		}
 	}
 }

@@ -199,7 +199,7 @@ $reviews = get_field('reviews', 'options');
 <section class="reviews">
 	<div class="container">
 		<div class="reviews__container">
-			<h2 class="reviews__header">
+			<h2 class="reviews__header font-50">
 				<?php echo $reviews_header; ?>
 			</h2>
 
@@ -254,9 +254,11 @@ $cta_text = get_field('cta_text');
 		<div class="cta__text">
 			<?php echo $cta_text; ?>
 		</div>
-		<button class="cta__button">
-			SIGN UP
-		</button>
+		<a rel="noopener noreferrer" target="_blank" href="https://app.rallio.com/users/sign_in">
+			<button class="cta__button">
+				SIGN UP
+			</button>
+		</a>
 	</div>
 </section>
 

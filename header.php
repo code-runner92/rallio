@@ -47,7 +47,8 @@ $GLOBALS['src'] = get_template_directory_uri(); ?>
 <div class="container header-container">
   <div class="logo-container">
     <a class="logo" href="<?php echo home_url('/'); ?>" title="<?php _e('Logo Rallio', 'rallio'); ?>">
-      <img class="header__logo" src="<?php echo $GLOBALS['src']; ?>/dist/img/branding/rallio-logo.svg" alt="<?php _e('Logo Rallio', 'rallio'); ?>">
+      <!-- <img class="header__logo" src="<?php echo $GLOBALS['src']; ?>/dist/img/branding/rallio-logo.svg" alt="<?php _e('Logo Rallio', 'rallio'); ?>"> -->
+      <?php get_template_part('dist/img/branding/rallio-logo.svg'); ?>
     </a>
     <div class="menu-toggler">
       <div class="bar1"></div>

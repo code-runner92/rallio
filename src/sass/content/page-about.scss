@@ -17,6 +17,7 @@
 	overflow: hidden;
 	*{
 		z-index: 1;
+		position: relative;
 	}
 	.container{
 		div{
@@ -26,26 +27,11 @@
 	@media only screen and (max-width: 1000px){
 		padding: 50px 0;
 	}
-	.main-header{
-		font-size: 50px;
-		line-height: 70px;
-		font-weight: bold;
-		text-transform: uppercase;
-		@media only screen and (max-width: 1000px){
-			font-size: 30px;
-			line-height: 42px;
-		}
-	}
 	.slogan{
 		max-width: 450px;
 		margin: 50px auto 0 auto;
-		p{
-			font-size: 30px;
-			line-height: 42px;
-			@media only screen and (max-width: 1000px){
-				font-size: 20px;
-				line-height: 32px;
-			}
+		@media only screen and (max-width: 1000px){
+			margin: 20px auto 0 auto;
 		}
 	}
 
@@ -54,26 +40,11 @@
 		@media only screen and (max-width: 1000px){
 			margin-top: 50px;
 		}
-		.culture-header{
-			font-size: 50px;
-			line-height: 70px;
-			font-weight: bold;
-			text-transform: uppercase;
-			@media only screen and (max-width: 1000px){
-				font-size: 30px;
-				line-height: 42px;
-			}
-		}
 		.culture-slogan{
 			max-width: 1200px;
 			margin: 50px auto 0 auto;
-			p{
-				font-size: 30px;
-				line-height: 42px;
-				@media only screen and (max-width: 1000px){
-					font-size: 20px;
-					line-height: 32px;
-				}
+			@media only screen and (max-width: 1000px){
+				margin: 20px auto 0 auto;
 			}
 		}
 		.culture-box{
@@ -125,14 +96,6 @@
 		.about-review{
 			max-width: 1200px;
 			margin: 0 auto;
-			p{
-				font-size: 30px;
-				line-height: 42px;
-				@media only screen and (max-width: 1000px){
-					font-size: 20px;
-					line-height: 32px;
-				}
-			}
 		}
 		.about-author{
 			margin-top: 50px;

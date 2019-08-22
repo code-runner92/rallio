@@ -16,9 +16,9 @@ $bg_img_url = get_field('about_us_image');
 		$slogan = get_field('about_us_slogan');
 		?>
 
-		<h1 class="main-header"><?php echo $heading; ?></h1>
+		<h1 class="main-header font-50"><?php echo $heading; ?></h1>
 
-		<div class="slogan"><?php echo $slogan; ?></div>
+		<div class="slogan font-30"><?php echo $slogan; ?></div>
 
 		<div class="about-boxes">
 			boxes
@@ -31,8 +31,8 @@ $bg_img_url = get_field('about_us_image');
 		$culture_values = get_field('culture_values');
 		?>
 		<div class="about-culture">
-			<h2 class="culture-header"><?php echo $culture_title; ?></h2>
-			<div class="culture-slogan"><?php echo $culture_slogan; ?></div>
+			<h2 class="culture-header font-50"><?php echo $culture_title; ?></h2>
+			<div class="culture-slogan font-30"><?php echo $culture_slogan; ?></div>
 			<div class="culture-box">
 				<div class="culture-image" style="background-image: url('<?php echo $culture_image; ?>')"></div>
 				<div class="culture-values">
@@ -58,7 +58,7 @@ $bg_img_url = get_field('about_us_image');
 		$about_review_author = get_field('about_author');
 		?>
 		<div class="about-review-container">
-			<div class="about-review"><?php echo $about_review; ?></div>
+			<div class="about-review font-30"><?php echo $about_review; ?></div>
 			<p class="about-author"><?php echo $about_review_author; ?></p>
 		</div>
 

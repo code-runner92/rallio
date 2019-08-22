@@ -255,3 +255,23 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     50%  { transform: rotate(270deg) translateY(7px); }
     100% { transform: rotate(270deg) translateY(0); }
 }
+
+.font-50{
+  font-size: 50px;
+  line-height: 75px;
+  text-transform: uppercase;
+  @media only screen and (max-width: 1000px){
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.font-30, .font-30 p{
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: normal;
+  @media only screen and (max-width: 1000px){
+    font-size: 20px;
+    line-height: 32px;
+  }
+}

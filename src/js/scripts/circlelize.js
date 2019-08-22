@@ -37,3 +37,8 @@ const localContainer = document.querySelector('.local-container');
 if (localContainer) {
 	circlelize(localContainer);
 }
+
+const techContainer = document.querySelector('.tech-container');
+if (techContainer) {
+	circlelize(techContainer);
+}

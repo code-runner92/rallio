@@ -1,7 +1,7 @@
 .tech-hero{
 	height: 500px;
 	background: #EBE7F3;
-	z-index: 1;
+	z-index: 2;
 	position: relative;
 	@media only screen and (max-width: 1000px){
 		height: 50vh;
@@ -32,192 +32,31 @@
 			position: relative;
 		}
 	}
-	@media only screen and (max-width: 1000px){
+	@media only screen and (max-width: 400px){
 		padding-top: 150px;
-	}
-	.tech-header{
-		font-size: 50px;
-		line-height: 70px;
-		font-weight: bold;
-		text-transform: uppercase;
-		@media only screen and (max-width: 1000px){
-			font-size: 30px;
-			line-height: 42px;
-		}
-		&.not-first{
-			margin-top: 150px;
-			@media only screen and (max-width: 1000px){
-				margin-top: 50px;
-			}
-		}
 	}
 	.tech-text{
 		max-width: 800px;
 		margin: 50px auto 0 auto;
 	}
-	.local-flow{
-		.local-boxes{
-			padding-top: 200px;
-			background-repeat: no-repeat;
-			background-position: 50% 4%;
-			background-size: auto 60%;
-			@media only screen and (max-width: 1199px){
-				background-image: none !important;
-				padding-top: 50px;
-			}
-			.row{
-				align-items: stretch;
-			}
-			.local-box-container{
-				display: flex;
-				flex-direction: column;
-				.local-box-img{
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					align-items: center;
-					height: 330px;
-					margin-bottom: 100px;
-					@media only screen and (max-width: 1199px){
-						height: auto;
-						width: 90vw;
-						max-width: 630px;
-						margin: 0 auto 50px auto;
-					}
-					.phone{
-						width: 40%;
-						height: auto;
-						@media only screen and (max-width: 1199px){
-							width: 50%;
-						}
-					}
-					.arrow{
-						transform: rotate(270deg);
-						animation: bounce-right 1.5s ease-in-out 0s infinite;
-						@media only screen and (max-width: 1199px){
-							display: none;
-						}
-					}
-					&.phone-main{
-						background-image: none !important;
-						@media only screen and (max-width: 1199px){
-							height: 600px;
-							max-width: 800px;
-							background-image: url('./dist/img/local/AGENCY4.svg') !important;
-							background-repeat: no-repeat;
-							background-position: center;
-							background-size: cover;
-						}
-						@media only screen and (max-width: 500px){
-							height: 400px;
-						}
-						@media only screen and (max-width: 400px){
-							height: 350px;
-						}
-					}
-				}
-				.local-box-text{
-					flex-grow: 1;
-					background: #fff;
-					box-shadow: 0 2px 24px 0 rgba(0,0,0,0.1);
-					padding: 50px;
-					height: auto;
-					@media only screen and (max-width: 1500px){
-						padding: 25px;
-					}
-					@media only screen and (max-width: 1199px){
-						max-width: 800px;
-						margin: 0 auto 50px auto;
-					}
-					&, & p {
-						font-size: 31px;
-						line-height: 42px;
-						@media only screen and (max-width: 1199px){
-							font-size: 20px;
-							line-height: 32px;
-						}
-					}
-					.local-box-number{
-						color: #4FBE9E;
-						font-weight: bold;
-						margin-bottom: 50px;
-					}
-				}
-			}
-			.arrow-mobile{
-				display: none;
-				@media only screen and (max-width: 1199px){
-					display: block;
-					margin: 0 auto;
-					animation: bounce 1.5s ease-in-out 0s infinite;
-				}
-			}
+	.tech-clients-box{
+		background: #fff;
+		box-shadow: 0 2px 24px 0 rgba(0,0,0,0.1);
+		padding: 100px;
+		margin-top: 100px;
+		@media only screen and (max-width: 1000px){
+			margin-top: 50px;
+			padding: 20px;
 		}
-		.flow-result{
-			position: relative;
-			@media only screen and (max-width: 1350px){
-				margin-top: 50px;
-			}
-			.flow-result-img{
-				max-width: 800px;
-				height: auto;
-				margin-left: 15%;
-				@media only screen and (max-width: 1800px){
-					margin-left: 10%;
-				}
-				@media only screen and (max-width: 1650px){
-					margin-left: 0;
-				}
-				@media only screen and (max-width: 1350px){
-					margin: 0 auto;
-					width: 90vw;
-					padding-top: 150px;
-				}
-				@media only screen and (max-width: 550px){
-					width: 100%;
-				}
-			}
-			.flow-result-box{
-				background: #fff;
-				box-shadow: 0 2px 24px 0 rgba(0,0,0,0.1);
-				position: absolute;
-				top: 50%;
-				right: 0;
-				transform: translate(0, -50%);
-				padding: 50px 100px;
-				text-align: left;
-				border-radius: 10px;
-				@media only screen and (max-width: 1500px){
-					padding: 20px;
-				}
-				@media only screen and (max-width: 1350px){
-					top: 0;
-					left: 50%;
-					transform: translate(-50%, 0);
-				}
-				@media only screen and (max-width: 550px){
-					left: 0;
-					width: 100%;
-					transform: none;
-				}
-				&, & p {
-					font-size: 31px;
-					line-height: 42px;
-					@media only screen and (max-width: 1199px){
-						font-size: 20px;
-						line-height: 32px;
-					}
-				}
-				.flow-result-header{
-					color: #4FBE9E;
-					font-weight: bold;
-					text-transform: uppercase;
-					margin-bottom: 30px;
-				}
-			}
+		.tech-clients-header{
+			font-size: 30px;
+			line-height: 45px;
+		}
+		.tech-clients-img{
+			margin: 100px auto 0 auto;
 		}
 	}
-	.employee-advocacy{
+	.franchisees-experience{
 		padding: 100px 0;
 		background: #003B7D;
 		margin-top: 150px;
@@ -227,15 +66,227 @@
 			padding: 50px 0;
 			margin-top: 50px;
 		}
-		.employee-advocacy-img{
+		.franchisees-experience-container{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			@media only screen and (max-width: 1000px){
+				flex-direction: column;
+			}
+			.franchisees-experience-imgs{
+				display: flex;
+				flex-direction: row;
+				width: 50%;
+				justify-content: center;
+				align-items: center;
+				@media only screen and (max-width: 1000px){
+					width: 100%;
+				}
+				.franchisees-experience-img{
+					max-height: 400px;
+					&:first-child{
+						max-width: 30%;
+					}
+					&:nth-child(2){
+						max-width: 70%;
+					}
+				}
+			}
+			.franchisees-experience-text-container{
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+				width: 40%;
+				@media only screen and (max-width: 1000px){
+					width: 100%;
+					text-align: center;
+					margin-top: 30px;
+				}
+				.franchisees-experience-header{
+					max-width: 520px;
+					@media only screen and (max-width: 1000px){
+						margin: 0 auto;
+					}
+				}
+				.franchisees-experience-text{
+					margin-top: 50px;
+				}
+			}
+		}
+	}
+	.customizations{
+		margin-top: 100px;
+		@media only screen and (max-width: 1000px){
+			margin-top: 50px;
+		}
+		.customizations-text{
 			margin: 50px auto 0 auto;
 			max-width: 800px;
-			&:nth-of-type(2){
-				margin: 0 auto;
-			}
+		}
+	}
+	.suppliers{
+		.suppliers-text{
+			margin: 50px auto 0 auto;
+			max-width: 800px;
+		}
+		.suppliers-img{
+			margin: 0 auto;
+			width: 800px;
+			height: auto;
+			max-width: 90vw;
+		}
+	}
+	.revv{
+		margin-top: 100px;
+		@media only screen and (max-width: 1000px){
+			margin-top: 50px;
+		}
+		.revv-subheader{
+			margin-top: 20px;
+		}
+		.revv-reviews{
+			margin-top: 50px;
 			@media only screen and (max-width: 1000px){
-				margin: 50px auto 0 auto;
-				max-width: 90vw;
+				margin-top: 20px;
+			}
+			.revv-review{
+				padding: 10px;
+				@media only screen and (max-width: 1000px){
+					padding: 20px;
+				}
+				.revv-review-container{
+					border-radius: 10px;
+					box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+					height: 100%;
+					background: #fff;
+					.revv-review-img{
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+						height: 300px;
+						border-radius: 10px 10px 0 0;
+						background-color: #f3f3f3;
+						@media only screen and (max-width: 400px){
+							height: 250px;
+						}
+						@media only screen and (max-width: 350px){
+							height: 200px;
+						}
+					}
+					.revv-review-text{
+						padding: 50px;
+						text-align: left;
+						@media only screen and (max-width: 1000px){
+							padding: 30px;
+						}
+						.revv-review-title{
+							text-transform: uppercase;
+							margin-bottom: 30px;
+							width: 100%;
+							text-transform: uppercase;
+							color: #4FBE9E;
+							font-weight: bold;
+							&:after{
+								content: '';
+								width: 40%;
+								margin-right: 50%;
+								height: 3px;
+								background: #000;
+								display: inline-block;
+								margin-top: 30px;
+							}
+						}
+						.revv-review-content{
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.tech-graph{
+		margin-top: 100px;
+		@media only screen and (max-width: 1000px){
+			margin-top: 50px;
+		}
+		.tech-graph-img{
+			margin: 0 auto;
+			width: 1050px;
+			max-width: 90vw;
+		}
+	}
+	.business-listing-service{
+		margin: 150px 0;
+		@media only screen and (max-width: 1000px){
+			margin: 50px 0;
+		}
+		.business-listing-service-container{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 1050px;
+			max-width: 100%;
+			margin: 0 auto;
+			@media only screen and (max-width: 1000px){
+				flex-direction: column;
+			}
+			.business-listing-service-imgs{
+				width: 50%;
+				@media only screen and (max-width: 1000px){
+					width: 100%;
+				}
+				.business-listing-service-img{
+					width: 100%;
+					height: auto;
+					@media only screen and (max-width: 1000px){
+						width: 50vw;
+						margin: 0 auto;
+					}
+				}
+			}
+			.business-listing-service-text-container{
+				width: 50%;
+				text-align: left;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				@media only screen and (max-width: 1000px){
+					width: 100%;
+					text-align: center;
+					margin-top: 30px;
+				}
+				.business-listing-service-text{
+					margin-top: 50px;
+				}
+				.business-icons{
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					margin-top: 50px;
+					@media only screen and (max-width: 1000px){
+						justify-content: space-around;
+					}
+					.business-icon-container{
+						width: 25%;
+						.business-icon{
+							width: 100%;
+							padding-top: 100%;
+							height: 0;
+							position: relative;
+							background: #fff;
+							border-radius: 50%;
+							box-shadow: 0 0 1751px 0 rgba(0,0,0,0.1);
+							img{
+								width: 50%;
+								height: auto;
+								position: absolute;
+								left: 50%;
+								top: 50%;
+								transform: translate(-50%, -50%);
+							}
+						}
+					}
+				}
 			}
 		}
 	}

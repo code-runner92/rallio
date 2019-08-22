@@ -117,7 +117,7 @@ $bg_img_url = get_field('about_us_image');
 	<section class="reviews">
 		<div class="container">
 			<div class="reviews__container">
-				<h2 class="reviews__header">
+				<h2 class="reviews__header font-50">
 					<?php echo $reviews_header; ?>
 				</h2>
 

@@ -370,11 +370,6 @@
 		background-image: url('./dist/img/bgs/HERO-TESTIMONIALS.png');
 		box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 		text-align: center;
-		.reviews__header{
-			font-size: 49px;
-			line-height: 70px;
-			text-transform: uppercase;
-		}
 		.swiper-container {
 			display: flex;
 			flex-direction: column;
@@ -425,8 +420,6 @@
 			padding: 0;
 			background: #fff;
 			.reviews__header{
-				font-size: 35px;
-				line-height: 45px;
 				max-width: 80%;
 				margin: 0 auto;
 			}
