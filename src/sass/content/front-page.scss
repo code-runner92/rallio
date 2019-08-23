@@ -466,8 +466,8 @@
 		max-width: 600px;
 		margin: 50px auto 0 auto;
 	}
-	.cta__button{
-		margin-top: 60px;
+	.cta__button, input[type="submit"]{
+		// margin-top: 60px;
 		border: none;
 		border-radius: 3px;
 		background-color: #4FBE9E;
@@ -477,9 +477,22 @@
 		padding: 11px 23px;
 		letter-spacing: 2px;
 		transition: all .5s ease;
+		line-height: 13px;
+		width: auto;
 		&:hover, &:active{
 			background-color: #fff;
 			color: #4FBE9E;
+		}
+	}
+	.ctct-message{
+		border: none !important;
+		&.success{
+			color: #4FBE9E;
+			background: transparent;
+		}
+		&.named_error{
+			color: red;
+			background: transparent;
 		}
 	}
 	form{

@@ -78,7 +78,11 @@ if (strpos($url, 'author') !== false) {
 						
 						<div class="single-post-container">	
 							<a href="<?php echo $link; ?>">
-								<div class="post__img" style="background-image: url('<?php echo $thumbnail_link ?>')"></div>
+								<?php if ($thumbnail_link) { ?>
+									<div class="post__img" style="background-image: url('<?php echo $thumbnail_link ?>')"></div>
+								<?php } else { ?>
+									<div class="post__img" style="background-image: url('<?php echo  $GLOBALS['src'] ?>/dist/img/placeholder.jpg')"></div>
+								<?php } ?>
 							</a>
 								<div class="post__desc">
 									<span class="post__date"><?php echo $date; ?></span>

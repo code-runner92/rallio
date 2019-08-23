@@ -108,6 +108,49 @@ $bg_img_url = get_field('about_us_image');
 		</div>
 	</section>
 
+
+	<?php 
+	$carousel_items = get_field('carousel');
+	?>
+
+	<?php if ($carousel_items) { ?>
+	<section class="carousel">
+			<div class="carousel__container">
+
+				<div class="swiper-carousel-container">
+
+					<div class="swiper-carousel-pagination"></div>
+
+					<div class="swiper-wrapper">
+
+						<?php foreach( $carousel_items as $item ) {
+
+							$title = $item['title'];
+							$content = $item['content'];
+							$image = $item['image'];
+						?>
+
+					 		<div class="swiper-slide r-carousel-item" data-title="<?php echo $title; ?>">
+					 			<div class="r-carousel-item-img-wrapper">
+					 				<img class="r-carousel-item-img" src="<?php echo $image ?>" alt="">
+					 			</div>
+					 			<div class="r-carousel-item-text">
+						 			<div class="r-carousel-item-title"><?php echo $title; ?></div>
+						 			<div class="r-carousel-item-content"><?php echo $content; ?></div>
+					 			</div>
+					 		</div>
+
+					 	<?php } ?>
+
+					</div>
+					
+				</div>			
+
+			</div>
+	</section>
+	<?php } ?>
+
+	
 	<?php 
 	$reviews_header = get_field('reviews_header', 'options');
 	$reviews = get_field('reviews', 'options');
@@ -169,17 +212,7 @@ $cta_text = $cta_box['text_under_the_form'];
 
 <section class="cta cta_case_studies">
 	<div class="container">
-		<p class="cta__header">
-			<?php echo $cta_header; ?>
-		</p>
-		<h2 class="cta__caller">
-			<?php echo $cta_slogan; ?>
-		</h2>
-		<form action="">
-			<input type="text">
-			<label for="">Enter you e-mail address</label>
-			<button class="cta__button">Submit</button>
-		</form>
+		<?php echo do_shortcode('[ctct form="357"]'); ?>
 		<div class="cta__text">
 			<?php echo $cta_text; ?>
 		</div>

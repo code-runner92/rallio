@@ -27,11 +27,88 @@ $bg_img_url = get_field('about_us_image');
 		?>
 		<div class="tech-clients-box">
 			<h2 class="tech-clients-header"><?php echo $tech_clients_header; ?></h2>
-			<img class="tech-clients-img" src="<?php echo  $GLOBALS['src'] ?>/dist/img/tech/TECH2.svg" alt="">
+			<div class="row">
+				<div class="col-12 col-md-6 col-xl-3 tech-clients-img">
+					<img src="<?php echo  $GLOBALS['src'] ?>/dist/img/tech/Manufactures.svg" alt="">
+					<p class="tech-clients-title">Manufactures</p>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3 tech-clients-img">
+					<img src="<?php echo  $GLOBALS['src'] ?>/dist/img/tech/Agencies.svg" alt="">
+					<p class="tech-clients-title">Agencies</p>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3 tech-clients-img">
+					<img src="<?php echo  $GLOBALS['src'] ?>/dist/img/tech/Franchisor.svg" alt="">
+					<p class="tech-clients-title">Franchisor</p>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3 tech-clients-img">
+					<img src="<?php echo  $GLOBALS['src'] ?>/dist/img/tech/Directors.svg" alt="">
+					<p class="tech-clients-title">Regional Directors <br>Field Operations</p>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3 tech-clients-img">
+					<img src="<?php echo  $GLOBALS['src'] ?>/dist/img/tech/Area.svg" alt="">
+					<p class="tech-clients-title">Multi Unit/Master <br> Area Developer</p>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3 tech-clients-img">
+					<img src="<?php echo  $GLOBALS['src'] ?>/dist/img/tech/Franchisees.svg" alt="">
+					<p class="tech-clients-title">Franchisees</p>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3 tech-clients-img">
+					<img src="<?php echo  $GLOBALS['src'] ?>/dist/img/tech/Employees.svg" alt="">
+					<p class="tech-clients-title">Employees</p>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3 tech-clients-img">
+					<img src="<?php echo  $GLOBALS['src'] ?>/dist/img/tech/Customers.svg" alt="">
+					<p class="tech-clients-title">Customers</p>
+				</div>
+			</div>
+
 		</div>
 
 
 	</div>
+
+
+	<?php 
+	$carousel_items = get_field('carousel');
+	?>
+
+	<?php if ($carousel_items) { ?>
+	<section class="carousel">
+			<div class="carousel__container">
+
+				<div class="swiper-carousel-container">
+
+					<div class="swiper-carousel-pagination"></div>
+
+					<div class="swiper-wrapper">
+
+						<?php foreach( $carousel_items as $item ) {
+
+							$title = $item['title'];
+							$content = $item['content'];
+							$image = $item['image'];
+						?>
+
+					 		<div class="swiper-slide r-carousel-item" data-title="<?php echo $title; ?>">
+					 			<div class="r-carousel-item-img-wrapper">
+					 				<img class="r-carousel-item-img" src="<?php echo $image ?>" alt="">
+					 			</div>
+					 			<div class="r-carousel-item-text">
+						 			<div class="r-carousel-item-title"><?php echo $title; ?></div>
+						 			<div class="r-carousel-item-content"><?php echo $content; ?></div>
+					 			</div>
+					 		</div>
+
+					 	<?php } ?>
+
+					</div>
+					
+				</div>			
+
+			</div>
+	</section>
+	<?php } ?>
+
 	
 	<?php 
 		$franchisees_experience_header = get_field('franchisees_experience_header');
@@ -197,17 +274,7 @@ $cta_text = $cta_box['text_under_the_form'];
 
 <section class="cta cta_case_studies">
 	<div class="container">
-		<p class="cta__header">
-			<?php echo $cta_header; ?>
-		</p>
-		<h2 class="cta__caller">
-			<?php echo $cta_slogan; ?>
-		</h2>
-		<form action="">
-			<input type="text">
-			<label for="">Enter you e-mail address</label>
-			<button class="cta__button">Submit</button>
-		</form>
+		<?php echo do_shortcode('[ctct form="357"]'); ?>
 		<div class="cta__text">
 			<?php echo $cta_text; ?>
 		</div>

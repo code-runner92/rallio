@@ -2,7 +2,6 @@ const circlelize = (container) => {
 	const circlesContainer = document.querySelector('.circles');
 	const containerHeight = container.clientHeight;
 	const NoOfCircles = 5 * Math.round( containerHeight / window.screen.width );
-	console.log(NoOfCircles);
 	let circles = '';
 
 	for (let i=0; i < NoOfCircles; i++) {

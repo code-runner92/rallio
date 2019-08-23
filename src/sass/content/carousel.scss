@@ -1,0 +1,100 @@
+.carousel{
+	margin: 150px 0;
+	@media only screen and (max-width: 1000px){
+		margin: 50px 0;
+	}
+	.swiper-carousel-pagination{
+		margin-bottom: 20px;
+		color: #AEAEAE;
+		font-weight: bold;
+		text-transform: uppercase;
+		transition: all .3s ease;
+		a{
+			cursor: pointer;
+			&:not(:first-child){
+				margin-left: 50px;
+			}
+			&.active{
+				color: #4FBE9E;
+			}
+			&:hover{
+				color: #4FBE9E;
+			}
+		}
+		@media only screen and (max-width: 1000px){
+			display: flex;
+			flex-direction: column;
+			a{
+				margin: 20px 0 0 0 !important;
+			}
+		}
+		@media only screen and (max-width: 500px){
+			font-size: 16px;
+		}
+	}
+	.r-carousel-item{
+		padding: 0 5%;
+		height: 100%;
+		.r-carousel-item-img-wrapper{
+			height: 650px;
+			max-height: 50vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.r-carousel-item-text{
+			.r-carousel-item-title{
+				font-weight: bold;
+				text-transform: uppercase;
+				padding-bottom: 30px;
+				margin-bottom: 30px;
+				border-bottom: 3px solid #000000;
+				display: inline-block;
+				@media only screen and (max-width: 500px){
+					font-size: 16px;
+					padding-bottom: 10px;
+					margin-bottom: 10px;
+					border-width: 2px;
+				}
+			}
+			.r-carousel-item-content{
+				max-width: 800px;
+				margin: 0 auto;
+				@media only screen and (max-width: 500px){
+					&, p {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	&.carousel-about{
+		.swiper-wrapper{
+			margin-top: 100px;
+			@media only screen and (max-width: 1000px){
+				margin-top: 50px;
+			}
+		}
+		.r-carousel-item{
+			@media only screen and (max-width: 1000px){
+				padding: 0 10px;
+			}
+			.r-carousel-item-img-wrapper{
+				height: 300px;
+				overflow: hidden;
+				border-radius: 10px 10px 0 0;
+				box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+			}
+			.r-carousel-item-text{
+				text-align: left;
+				padding: 50px;
+				background: #fff;
+				border-radius: 0 0 10px 10px;
+				box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+				@media only screen and (max-width: 1000px){
+					padding: 15px;
+				}
+			}
+		}
+	}
+}

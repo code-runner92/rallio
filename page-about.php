@@ -20,10 +20,53 @@ $bg_img_url = get_field('about_us_image');
 
 		<div class="slogan font-30"><?php echo $slogan; ?></div>
 
-		<div class="about-boxes">
-			boxes
-		</div>
-		
+	</div>
+
+
+	<?php 
+	$carousel_items = get_field('carousel');
+	?>
+
+	<?php if ($carousel_items) { ?>
+	<section class="carousel carousel-about">
+			<div class="carousel__container">
+
+				<div class="swiper-carousel-container">
+
+					<div class="swiper-carousel-pagination"></div>
+
+					<div class="swiper-wrapper">
+
+						<?php foreach( $carousel_items as $item ) {
+
+							$title = $item['title'];
+							$content = $item['content'];
+							$image = $item['image'];
+						?>
+
+					 		<div class="swiper-slide r-carousel-item" data-title="<?php echo $title; ?>">
+					 			<div class="r-carousel-item-img-wrapper">
+					 				<img class="r-carousel-item-img" src="<?php echo $image ?>" alt="">
+					 			</div>
+					 			<div class="r-carousel-item-text">
+						 			<div class="r-carousel-item-title"><?php echo $title; ?></div>
+						 			<div class="r-carousel-item-content"><?php echo $content; ?></div>
+					 			</div>
+					 		</div>
+
+					 	<?php } ?>
+
+					</div>
+					
+				</div>			
+
+			</div>
+	</section>
+	<?php } ?>
+
+	
+	<div class="container">
+
 		<?php 
 		$culture_title = get_field('culture_title');
 		$culture_slogan = get_field('culture_slogan');

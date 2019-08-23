@@ -11,7 +11,11 @@ $author = get_author_name();
 $content = get_the_content();
 ?>
 
-<div class="post-hero" style="background-image: url('<?php echo $thumbnail_link; ?>')"></div>
+<?php if ($thumbnail_link) { ?>
+	<div class="post-hero" style="background-image: url('<?php echo $thumbnail_link; ?>')"></div>
+<?php } else { ?>
+	<div class="post-hero post-hero-placeholder" style="background-image: url('<?php echo  $GLOBALS['src'] ?>/dist/img/placeholder.jpg')"></div>
+<?php } ?>
 
 <div class="post-container">
 

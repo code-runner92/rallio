@@ -47,7 +47,8 @@ gulp.task('scripts', function(){
     'src/js/scripts/header.js',
     'src/js/scripts/blog.js',
     'src/js/scripts/circlelize.js',
-    'src/js/scripts/front-page.js'
+    'src/js/scripts/front-page.js',
+    'src/js/scripts/swiper-carousel.js'
     ])
   .pipe(babel({
       presets: ['@babel/env']

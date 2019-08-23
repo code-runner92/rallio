@@ -282,12 +282,12 @@ endforeach;
 }
 
 // 
-// 
+// BLOG QUERY MODIFICATION
 // 
 // My function to modify the main query object
 function my_modify_main_query( $query ) {
-if ( $query->is_main_query() ) { // Run only on the homepage
-$query->query_vars['cat'] = -10; // Exclude my featured category because I display that elsewhere
+if ( is_home() && $query->is_main_query() ) { 
+$query->query_vars['cat'] = -10; // Exclude case studies
 }
 }
 // Hook my above function to the pre_get_posts action
