@@ -21,7 +21,7 @@ $flow_text = get_field('flow_text');
 <section class="flow">
 	<div class="container">
 		<section class="flow__header">
-			<h2 class="flow__heading">
+			<h2 class="flow__heading font-50">
 				<?php echo $flow_heading; ?>
 			</h2>
 			<div class="flow__text">
@@ -191,8 +191,8 @@ $flow_text = get_field('flow_text');
 </section>
 
 <?php 
-$reviews_header = get_field('reviews_header', 'options');
-$reviews = get_field('reviews', 'options');
+$reviews_header = get_field('reviews_header');
+$reviews = get_field('reviews');
 ?>
 
 <?php if ($reviews) { ?>
@@ -241,20 +241,22 @@ $reviews = get_field('reviews', 'options');
 $cta_header = get_field('cta_header');
 $cta_slogan = get_field('cta_slogan');
 $cta_text = get_field('cta_text');
+$cta_link = get_field('cta_link');
+
 ?>
 
-<section class="cta">
+<section class="cta cta-front-page">
 	<div class="container">
 		<p class="cta__header">
 			<?php echo $cta_header; ?>
 		</p>
-		<h2 class="cta__caller">
+		<h2 class="cta__caller font-50">
 			<?php echo $cta_slogan; ?>
 		</h2>
 		<div class="cta__text">
 			<?php echo $cta_text; ?>
 		</div>
-		<a rel="noopener noreferrer" target="_blank" href="https://app.rallio.com/users/sign_in">
+		<a rel="noopener noreferrer" target="_blank" href="<?php echo $cta_link; ?>">
 			<button class="cta__button">
 				SIGN UP
 			</button>

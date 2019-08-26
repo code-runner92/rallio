@@ -17,7 +17,7 @@ $content = get_the_content();
 
 	<div class="container post">
 		<p class="post-date"><?php echo $date; ?></p>
-		<h1 class="post-title"><?php echo $title; ?></h1>
+		<h1 class="post-title font-50"><?php echo $title; ?></h1>
 		<p class="post-author">by <span><?php echo $author; ?></span></p>
 
 		<div class="post-content">
@@ -31,27 +31,17 @@ $content = get_the_content();
 
 <?php
 $cta_box = get_field('case_studies_cta', 'options');
-$cta_header = $cta_box['header'];
-$cta_slogan = $cta_box['slogan'];
 $cta_text = $cta_box['text_under_the_form'];
 ?>
 
 <section class="cta cta_case_studies">
 	<div class="container">
-		<p class="cta__header">
-			<?php echo $cta_header; ?>
-		</p>
-		<h2 class="cta__caller">
-			<?php echo $cta_slogan; ?>
-		</h2>
-		<form action="">
-			<input type="text">
-			<label for="">Enter you e-mail address</label>
-			<button class="cta__button">Submit</button>
-		</form>
-		<div class="cta__text">
-			<?php echo $cta_text; ?>
-		</div>
+		<?php echo do_shortcode('[ctct form="358"]'); ?>
+		<?php if ($cta_text) { ?>
+			<div class="cta__text">
+				<?php echo $cta_text; ?>
+			</div>
+		<?php } ?>
 	</div>
 </section>
 

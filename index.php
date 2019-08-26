@@ -31,7 +31,7 @@ if (strpos($url, 'author') !== false) {
 <div class="blog-container">
 
 	<div class="container">
-		<h1><?php echo $blog_title; ?></h1>
+		<h1 class="font-50"><?php echo $blog_title; ?></h1>
 
 		<div class="categories">
 			<span class="categories-title">Categories</span>
@@ -120,25 +120,9 @@ if (strpos($url, 'author') !== false) {
 </div>
 
 
-<?php 
-$newsletter_header = get_field('newsletter_header', 21);
-$newsletter_slogan = get_field('newsletter_slogan', 21);
-?>
-
-<section class="newsletter">
+<section class="cta cta_case_studies">
 	<div class="container">
-		<p class="newsletter__header">
-			<?php echo $newsletter_header; ?>
-		</p>
-		<h2 class="newsletter__caller">
-			<?php echo $newsletter_slogan; ?>
-		</h2>
-
-		<form action="">
-			<input type="text">
-			<label for="">Enter you e-mail address</label>
-			<button class="newsletter__button">Subscribe</button>
-		</form>
+		<?php echo do_shortcode('[ctct form="361"]'); ?>
 	</div>
 </section>
 

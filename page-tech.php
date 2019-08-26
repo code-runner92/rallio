@@ -141,8 +141,8 @@ $bg_img_url = get_field('about_us_image');
 	
 
 	<?php 
-	$reviews_header = get_field('reviews_header', 'options');
-	$reviews = get_field('reviews', 'options');
+	$reviews_header = get_field('reviews_header');
+	$reviews = get_field('reviews');
 	?>
 
 	<?php if ($reviews) { ?>
@@ -267,17 +267,17 @@ $bg_img_url = get_field('about_us_image');
 
 <?php
 $cta_box = get_field('local_tech_cta', 'options');
-$cta_header = $cta_box['header'];
-$cta_slogan = $cta_box['slogan'];
 $cta_text = $cta_box['text_under_the_form'];
 ?>
 
 <section class="cta cta_case_studies">
 	<div class="container">
 		<?php echo do_shortcode('[ctct form="357"]'); ?>
-		<div class="cta__text">
-			<?php echo $cta_text; ?>
-		</div>
+		<?php if ($cta_text) { ?>
+			<div class="cta__text">
+				<?php echo $cta_text; ?>
+			</div>
+		<?php } ?>
 	</div>
 </section>
 

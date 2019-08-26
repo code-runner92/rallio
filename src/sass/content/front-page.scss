@@ -133,9 +133,6 @@
 		display: flex;
 		flex-direction: column;
 		.flow__heading{
-			font-size: 49px;
-			line-height: 70px;
-			text-transform: uppercase;
 			max-width: 600px;
 			margin: 0 auto;
 		}
@@ -214,8 +211,6 @@
 		padding: 80px 0;
 		.flow__header{
 			.flow__heading{
-				font-size: 35px;
-				line-height: 45px;
 				max-width: 80%;
 			}
 		}
@@ -455,8 +450,8 @@
 		padding-bottom: 10px;
 	}
 	.cta__caller{
-		font-size: 49px;
-		line-height: 70px;
+		font-size: 50px;
+  		line-height: 75px;
 		text-transform: uppercase;
 		max-width: 600px;
 		margin: 50px auto 0 auto;
@@ -467,7 +462,6 @@
 		margin: 50px auto 0 auto;
 	}
 	.cta__button, input[type="submit"]{
-		// margin-top: 60px;
 		border: none;
 		border-radius: 3px;
 		background-color: #4FBE9E;
@@ -482,6 +476,14 @@
 		&:hover, &:active{
 			background-color: #fff;
 			color: #4FBE9E;
+		}
+		&:focus{
+			outline: none;
+		}
+	}
+	&.cta-front-page{
+		.cta__button, input[type="submit"]{
+			margin-top: 60px;
 		}
 	}
 	.ctct-message{
@@ -499,7 +501,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-top: 50px;
 		input{
 			background: transparent;
 			border: 1px solid #FFFFFF;
@@ -521,8 +522,8 @@
 	@media only screen and (max-width: 1000px){
 		padding: 80px 0;
 		.cta__caller{
-			font-size: 35px;
-			line-height: 45px;
+			font-size: 30px;
+    		line-height: 42px;
 			max-width: 80%;
 		}
 	}

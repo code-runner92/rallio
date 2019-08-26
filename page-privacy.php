@@ -15,7 +15,7 @@
 
 	<section class="container container--privacy information">
 		<div class="information-title">
-			<h1><?php echo $title; ?></h1>
+			<h1 class="font-50"><?php echo $title; ?></h1>
 			<p class="under-title">Privacy Policy of <a href="<?php echo $raw_url; ?>"><?php echo $url; ?></a></p>
 		</div>
 		<div class="row">

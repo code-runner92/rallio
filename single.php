@@ -21,7 +21,7 @@ $content = get_the_content();
 
 	<div class="container post">
 		<p class="post-date"><?php echo $date; ?></p>
-		<h1 class="post-title"><?php echo $title; ?></h1>
+		<h1 class="post-title font-50"><?php echo $title; ?></h1>
 		<p class="post-author">by <span><?php echo $author; ?></span></p>
 
 		<div class="post-content">
@@ -76,6 +76,12 @@ $content = get_the_content();
 	<div class="circles"></div>
 	
 </div>
+
+<section class="cta cta_case_studies">
+	<div class="container">
+		<?php echo do_shortcode('[ctct form="361"]'); ?>
+	</div>
+</section>
 
 <?php endwhile;endif; ?>
 <?php get_footer(); ?>

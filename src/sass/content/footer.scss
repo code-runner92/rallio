@@ -90,6 +90,22 @@ footer{
 		p{
 			font-size: 15px;
 			line-height: 24px;
+			&:first-child{
+				margin-right: 5px;
+				@media only screen and (max-width: 1000px){
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		.container{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			@media only screen and (max-width: 1000px){
+				flex-direction: column;
+			}
 		}
 	}
 }

@@ -40,7 +40,7 @@ $seo_data = get_option('wpseo_social');
 	</div>
 	<div class="footer-footer">
 		<div class="container">
-			<p>Copyright © 2019 Rallio – All rights reserved. Designed and built by ADCHITECTS in time and budget.</p>
+			<p>Copyright © 2019 Rallio – All rights reserved.</p><p> Designed and built by ADCHITECTS in time and budget.</p>
 		</div>
 	</div>
 </footer>
