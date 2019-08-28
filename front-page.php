@@ -1,15 +1,19 @@
 <?php get_header(); ?>
 
+<?php
+$hero_img = get_field('hero_image');
+$hero_heading = get_field('hero_heading');
+$hero_button_text = get_field('hero_button_text');
+$hero_button_link = get_field('hero_button_link');
+?>
 
-<section class="hero">
-	<div class="container hero__container">
-		<img class="hero__img" src="<?php echo  $GLOBALS['src'] ?>/dist/img/HERO-ILLU1.svg" alt="">
-		<img class="hero__logo" src="<?php echo  $GLOBALS['src'] ?>/dist/img/branding/rallio-logo_sygnet.svg" alt="">
-		<img class="hero__img" src="<?php echo  $GLOBALS['src'] ?>/dist/img/HERO-ILLU2.svg" alt="">
-		<div class="hero__scroll">
-			<?php get_template_part('dist/img/icons/inline-SCROLL.svg'); ?>
-		</div>
-	</div>
+<section class="hero" style="background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url('<?php echo $hero_img; ?>')">
+	<?php if ($hero_heading) { ?>
+		<h2 class="hero-heading"><?php echo $hero_heading; ?></h2>
+	<?php } ?>
+	<?php if ($hero_button_text) { ?>
+	<a href="<?php echo $hero_button_link; ?>"><button><?php echo $hero_button_text; ?></button></a>
+	<?php } ?>
 </section>
 
 
