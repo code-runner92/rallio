@@ -292,3 +292,12 @@ $query->query_vars['cat'] = -10; // Exclude case studies
 }
 // Hook my above function to the pre_get_posts action
 add_action( 'pre_get_posts', 'my_modify_main_query' );
+
+// Enable svg
+function add_file_types_to_uploads($file_types){
+$new_filetypes = array();
+$new_filetypes['svg'] = 'image/svg+xml';
+$file_types = array_merge($file_types, $new_filetypes );
+return $file_types;
+}
+add_action('upload_mimes', 'add_file_types_to_uploads');

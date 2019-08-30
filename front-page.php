@@ -241,30 +241,10 @@ $reviews = get_field('reviews');
 </section>
 <?php } ?>
 
-<?php 
-$cta_header = get_field('cta_header');
-$cta_slogan = get_field('cta_slogan');
-$cta_text = get_field('cta_text');
-$cta_link = get_field('cta_link');
 
-?>
-
-<section class="cta cta-front-page">
+<section class="cta cta_case_studies">
 	<div class="container">
-		<p class="cta__header">
-			<?php echo $cta_header; ?>
-		</p>
-		<h2 class="cta__caller font-50">
-			<?php echo $cta_slogan; ?>
-		</h2>
-		<div class="cta__text">
-			<?php echo $cta_text; ?>
-		</div>
-		<a rel="noopener noreferrer" target="_blank" href="<?php echo $cta_link; ?>">
-			<button class="cta__button">
-				SIGN UP
-			</button>
-		</a>
+		<?php echo do_shortcode('[ctct form="1279"]'); ?>
 	</div>
 </section>
 
