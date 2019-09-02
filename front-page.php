@@ -241,7 +241,6 @@ $reviews = get_field('reviews');
 </section>
 <?php } ?>
 
-
 <section class="cta cta_case_studies">
 	<div class="container">
 		<?php echo do_shortcode('[ctct form="1279"]'); ?>
