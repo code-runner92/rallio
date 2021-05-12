@@ -28,6 +28,6 @@
     "imagemin-zopfli": "^5.1.0"
   },
   "dependencies": {
-    "swiper": "^4.5.0"
+    "swiper": "^6.5.1"
   }
 }
